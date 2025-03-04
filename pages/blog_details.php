@@ -87,7 +87,7 @@ $formattedDate = $date->format("F j, Y, g:i A");
   <?php if ($blog_comments->num_rows == 0) : ?>
     <p class="mt-20">No comments have been left yet </p>
     <?php else : ?>
-  <?php while($blogComment->fetch()) : ?>
+  <?php while($blog_comments->fetch()) : ?>
 <div class="relative grid grid-cols-1 gap-4 p-4 mb-8 border rounded-lg bg-white shadow-lg">
     <div class="relative flex gap-4">
         <img src="https://icons.iconarchive.com/icons/diversity-avatars/avatars/256/charlie-chaplin-icon.png" class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20" alt="" loading="lazy">

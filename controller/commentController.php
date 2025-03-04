@@ -1,11 +1,19 @@
 <?php
-session_start();
 include 'database/config.php'; // Include database connection
 
-if (!isset($_SESSION['id'])) {
-    // Redirect if not logged in
-    header("Location: login.php");
-    exit();
+$blogId = $_GET['bid'];
+$userId = $_GET['uid'];
+
+$insertComment = $conn->prepare("INSERT INTO blog_comment (content, blog_id, user_id) VALUES (?, ?, ?)");
+
+// Bind parameters to prevent SQL injection
+$insertComment->bind_param("sii", $_POST['content'], $blogId, $userId);
+
+// Execute the query
+if ($insertComment->execute()) {
+    $_SESSION['status_message'] = "Comment added successfully!";
+} else {
+    $_SESSION['status_message'] = "Error: " . $conn->error;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
