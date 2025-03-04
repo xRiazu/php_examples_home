@@ -67,6 +67,16 @@ CREATE TABLE `blog_comments` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `blog_comments`
+--
+
+INSERT INTO `blog_comments` (`cID`, `blogID`, `userID`, `content`, `created_at`, 'status') VALUES 
+(1, 14, 1, 'indie pop is cool genre of music', '2025-02-17 22:23:46', 'pending'),
+(2, 14, 2, 'indie pop is for old people', '2025-01-30 10:23:45', 'pending'),
+(3, 14, 3, 'indie pop is a horrible genre of music', '2025-03-03 00:00:15', 'pending');
+
+
 -- --------------------------------------------------------
 
 --
@@ -100,7 +110,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `user` ('uID', 'firstname', 'lastname', 'username', 'email', 'password', 'role', 'pfp', 'created_at') VALUES
-(2, 'Uzair', 'Mohammed', 'xRiazu', 'uzairmohammed@email.com', 'seventeencaratno1', 'user', '2025-02-11 00:09:02');
+(1, 'Uzair', 'Mohammed', 'xRiazu', 'uzairmohammed@email.com', 'seventeencaratno1', 'admin', '2025-02-11 00:09:02');
 
 --
 -- Indexes for dumped tables

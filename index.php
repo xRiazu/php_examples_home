@@ -13,10 +13,15 @@ $routes = [
     'admin' => 'pages/admin/dashboard.php', // admin page route
     'dashboard' => 'pages/user/user_dashboard.php', // user page route
 
+    'admin/adminDashboard' => 'pages/admin/admin_dash.php',
+    'admin/adminComments' => 'pages/admin/admin_comments.php',
+    'admin/adminBlogs' => 'pages/admin/blogs.php',
+
     'registerController' => 'controller/registerController.php',
     'loginController' => 'controller/loginController.php',
     'logOut' => 'controller/logOutController.php',
-    'commentController' => 'commentController.php',
+    'commentController' => 'controller/commentController.php',
+    'admin/approve' => 'controller/approveController.php',
 ];
 
 // Check if the URL matches a route

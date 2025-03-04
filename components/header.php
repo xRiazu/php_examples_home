@@ -1,5 +1,5 @@
 <?php
-define('ROOT_DIR', '/php_examples/php_examples-3/');
+define('ROOT_DIR', 'php_examples_home/');
 ?>
 <!DOCTYPE html>
 <html lang="en">

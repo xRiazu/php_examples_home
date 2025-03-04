@@ -27,7 +27,7 @@ $blogs->bind_result($blogID, $blogTitle, $blogContent, $blogStatus, $blogIMG, $c
               ?>
           <div class="bg-white rounded overflow-hidden">
             <div class="bg-white rounded overflow-hidden">  
-            <img src="<?=ROOT_DIR?>assets/images/<?= $blogIMG ?>" alt="Blog Post 3" class="w-full h-52 object-cover" />
+            <img src="<?=ROOT_DIR?>assets/images/<?= $blogIMG ?>" alt="Blog Post 1" class="w-full h-52 object-cover" />      
             <div class="p-6">
               <h3 class="text-lg font-bold text-gray-800 mb-3"><?= $blogTitle ?></h3>
               <p class="text-gray-500 text-sm ellipsis"><?= $blogContent ?></p>
