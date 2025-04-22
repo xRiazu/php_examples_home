@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Style Manipulation Example</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="box"></div>
+  <button id="styleBtn">Change Style</button>
+
+ <!-- Javascript will go here -->
+<script>
+
+const box =  document.getElementById('box');
+const button = document.getElementById('styleBtn')
+
+button.addEventListener('click', () =>{
+    box.style.backgroundColor = 'crimson';
+    box.style.border = '4px solid #000000';
+    box.style.borderRadius = '20px';
+    box.style.transform = 'rotate(1080deg)';
+})
+
+</script>
+
+</body>
+</html>
